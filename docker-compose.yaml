@@ -1,3 +1,4 @@
+version: '3'
 services:
   web:
     build: .
@@ -5,4 +6,3 @@ services:
       - "7755:7755"
     volumes:
       - .:/app
-    entrypoint: ["bash", "run.sh"]
