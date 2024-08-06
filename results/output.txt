@@ -1,0 +1,37 @@
+ranganath_ubuntu@Ranganath:/mnt/c/Users/ranga/OneDrive/Desktop/Project - 1/fyle-interview-intern-backend$ flask db upgrade -d core/migrations/
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+INFO  [alembic.runtime.migration] Will assume non-transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade  -> 4078b3b57e24, Initial migration.
+INFO  [alembic.runtime.migration] Running upgrade 4078b3b57e24 -> 2087a1db8595, assignments
+INFO  [alembic.runtime.migration] Running upgrade 2087a1db8595 -> 52a401750a76, principals
+ranganath_ubuntu@Ranganath:/mnt/c/Users/ranga/OneDrive/Desktop/Project - 1/fyle-interview-intern-backend$ pytest -vvv -s tests/
+=================================================================== test session starts ===================================================================
+platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-1.0.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: /mnt/c/Users/ranga/OneDrive/Desktop/Project - 1/fyle-interview-intern-backend, configfile: pytest.ini
+plugins: cov-2.12.1
+collected 21 items
+
+tests/principals_test.py::test_get_assignments PASSED
+tests/principals_test.py::test_grade_assignment_draft_assignment PASSED
+tests/principals_test.py::test_grade_assignment PASSED
+tests/principals_test.py::test_regrade_assignment PASSED
+tests/principals_test.py::test_get_teachers PASSED
+tests/principals_test.py::test_grade_assignment_empty_grade PASSED
+tests/principals_test.py::test_regrade_assignment_id_invalid PASSED
+tests/students_test.py::test_get_assignments_student_1 PASSED
+tests/students_test.py::test_get_assignments_student_2 PASSED
+tests/students_test.py::test_post_assignment_null_content PASSED
+tests/students_test.py::test_post_assignment_student_1 PASSED
+tests/students_test.py::test_submit_assignment_student_1 PASSED
+tests/students_test.py::test_assignment_resubmit_error PASSED
+tests/teachers_test.py::test_get_assignments_teacher_1 PASSED
+tests/teachers_test.py::test_get_assignments_teacher_2 PASSED
+tests/teachers_test.py::test_grade_assignment_cross PASSED
+tests/teachers_test.py::test_grade_assignment_bad_grade PASSED
+tests/teachers_test.py::test_grade_assignment_bad_assignment PASSED
+tests/teachers_test.py::test_grade_assignment_draft_assignment PASSED
+tests/SQL/sql_test.py::test_get_assignments_in_graded_state_for_each_student PASSED
+tests/SQL/sql_test.py::test_get_grade_A_assignments_for_teacher_with_max_grading PASSED
+
+=================================================================== 21 passed in 0.70s ====================================================================ranganath_uranganath_ubuntu@Ranganath:/mnt/c/Users/ranga/OneDrive/Desktop/Project - 1/fyle-interview-intern-backend$
