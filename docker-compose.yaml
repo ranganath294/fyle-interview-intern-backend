@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    ports:
+      - "7755:7755"
+    volumes:
+      - .:/app
+    entrypoint: ["bash", "run.sh"]
